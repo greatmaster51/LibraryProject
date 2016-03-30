@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Receipt";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+
+<head>
+    <title>HVCNBCVT - Application</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+
+    <link rel="stylesheet" href="~/styles/layout.css" type="text/css" />
+    <link href="~/styles/ui.jqgrid.css" rel="stylesheet" />
+    <link href="~/styles/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+    <link href="~/Scripts/dialog/jquery.alerts.1.css" rel="stylesheet" />
+
+    <script src="~/Scripts/JQGrid/jquery-1.11.0.min.js"></script>
+    <script src="~/Scripts/JQGrid/jquery.jqGrid.min.js"></script>
+    <script src="~/Scripts/JQGrid/grid.locale-en.js"></script>
+    <script src="~/Scripts/dialog/jquery.alerts.js"></script>
+    
+</head>
+<body id="top">
+    <!-- ####################################################################################################### -->
+    <div class="wrapper">
+        <div id="header">
+            <div class="fl_left">
+                <h2>Receipt View</h2>
+            </div>
+            <br class="clear" />
+        </div>
+        <div>
+            <ul id="menu">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </div>
+        
+    </div>
+    <!-- ####################################################################################################### -->
+    <div class="wrapper col2">
+        <div id="topbar">
+                <table>
+                    <tr>
+                        <td>Mã Sách</td>
+                        <td cols><input type="text" id="txtBookId" name ="txtBookId" style="display:normal" disabled/></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tên sách</span></td>
+                        <td> <input type="text" id="txtName" name="txtName" maxlength="200"></td>
+                        <td><span>Tóm Tắt</span></td>
+                        <td><input type="text" id="txtSummary" name="txtSummary" maxlength="200"></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tác Giả</span></td>
+                        <td><input type="text" id="txtAuthor" name="txtAuthor" maxlength="100"></td>
+                        <td><span>Số Trang</span></td>
+                        <td><input type="text" id="txtPageNumber" name="txtPageNumber" maxlength="4"></td>  
+                    </tr>
+                    <tr>
+                        <td>Thể Loại</td>
+                        <td>
+                            <select id="cmbCateId" name="cmbCateId">
+                                <option selected="selected" value="-1">The Loai</option>
+                                <option value="1">Truyện Tranh</option>
+                                <option value="2">Tiểu thuyết</option>
+                                <option value="3">Hài hước</option>
+                                <option value="4">Khác</option>
+                            </select>
+
+                        </td>
+                        <td>Còn Lưu Hành</td>
+                        <td>
+                            <select id="cmbIsContinued" name="cmbIsContinued" style="display:none">
+                                <option selected="selected" value="-1">Trạng Thái</option>
+                                <option value="1">Còn Lưu hành</option>
+                                <option value="0">Ngừng Lưu hành</option>
+                            </select>
+                        </td>
+
+                       
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align:center">
+                            <input type="button" id="btnMoi" name="btnMoi" value="Mới" />
+                            <input type="button" id="btnLuu" name="btnLuu" value="Lưu" />
+                            <input type="button" id="btnXoa" name="btnXoa" value="Xóa" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table id="tblJQGrid">
+                            </table>
+                            <div id="pager" name="pager"></div>
+                        </td>
+                    </tr>
+                </table>  
+        </div>
+    </div>
+    

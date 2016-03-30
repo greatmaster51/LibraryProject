@@ -1,0 +1,115 @@
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\JQGridJQueryPlugin.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\JQGridJQueryPlugin.pdb
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\Microsoft.Web.Infrastructure.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\Newtonsoft.Json.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Net.Http.Formatting.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Helpers.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.WebHost.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Mvc.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Razor.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Deployment.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Razor.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\Newtonsoft.Json.xml
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Net.Http.Formatting.xml
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Helpers.xml
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.xml
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.WebHost.xml
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Mvc.xml
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Razor.xml
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.xml
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Deployment.xml
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Razor.xml
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.csprojResolveAssemblyReference.cache
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.pdb
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\KDAL.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\KDAL.pdb
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\EntityFramework.dll
+C:\VM-PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\EntityFramework.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\JQGridJQueryPlugin.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\JQGridJQueryPlugin.pdb
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\EntityFramework.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\KDAL.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\Microsoft.Web.Infrastructure.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\Newtonsoft.Json.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Net.Http.Formatting.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Helpers.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.WebHost.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Mvc.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Razor.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Deployment.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Razor.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\KDAL.pdb
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\EntityFramework.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\Newtonsoft.Json.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Net.Http.Formatting.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Helpers.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.WebHost.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Mvc.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Razor.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Deployment.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Razor.xml
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.csprojResolveAssemblyReference.cache
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.dll
+E:\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.pdb
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\JQGridJQueryPlugin.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\JQGridJQueryPlugin.pdb
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\EntityFramework.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\KDAL.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\Microsoft.Web.Infrastructure.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\Newtonsoft.Json.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Net.Http.Formatting.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Helpers.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.WebHost.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Mvc.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Razor.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Deployment.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Razor.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\KDAL.pdb
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\EntityFramework.xml
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\Newtonsoft.Json.xml
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Net.Http.Formatting.xml
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Helpers.xml
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.xml
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Http.WebHost.xml
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Mvc.xml
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.Razor.xml
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.xml
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Deployment.xml
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\bin\System.Web.WebPages.Razor.xml
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.csprojResolveAssemblyReference.cache
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.dll
+C:\PROJECTS\MVC-4\JQGridJQueryPlugin\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.pdb
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.pdb
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\JQGridJQueryPlugin.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\JQGridJQueryPlugin.pdb
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\Microsoft.Web.Infrastructure.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Net.Http.Formatting.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.Helpers.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.Http.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.Http.WebHost.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.Mvc.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.Razor.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.WebPages.Deployment.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.WebPages.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.WebPages.Razor.dll
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\Microsoft.Web.Infrastructure.xml
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Net.Http.Formatting.xml
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.Helpers.xml
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.Http.xml
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.Http.WebHost.xml
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.Mvc.xml
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.Razor.xml
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.WebPages.xml
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.WebPages.Deployment.xml
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\bin\System.Web.WebPages.Razor.xml
+E:\Good Management\2. Demo Code\JQGridJQueryPlugin\obj\Debug\JQGridJQueryPlugin.csprojResolveAssemblyReference.cache

@@ -1,0 +1,300 @@
+﻿@{
+    ViewBag.Title = "Book";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<head>
+    <title>HVCNBCVT - Application</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+
+    <link rel="stylesheet" href="~/styles/layout.css" type="text/css" />
+    <link href="~/styles/ui.jqgrid.css" rel="stylesheet" />
+    <link href="~/styles/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+    <link href="~/Scripts/dialog/jquery.alerts.1.css" rel="stylesheet" />
+
+    <script src="~/Scripts/JQGrid/jquery-1.11.0.min.js"></script>
+    <script src="~/Scripts/JQGrid/jquery.jqGrid.min.js"></script>
+    <script src="~/Scripts/JQGrid/grid.locale-en.js"></script>
+    <script src="~/Scripts/dialog/jquery.alerts.js"></script>
+    
+</head>
+<body id="top">
+    <!-- ####################################################################################################### -->
+    <div class="wrapper">
+        <div id="header">
+            <div class="fl_left">
+                <h1><a href="#"><strong>Son</strong>DN <strong>MVC 4</strong>Demo Library</a></h1>
+                <p>By HHHS</p>
+            </div>
+            <br class="clear" />
+        </div>
+        <div>
+            <ul id="menu">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </div>
+        
+    </div>
+    <!-- ####################################################################################################### -->
+    <div class="wrapper col2">
+        <div id="topbar">
+                <table>
+                    <tr>
+                        <td>Mã Sách</td>
+                        <td cols><input type="text" id="txtBookId" name ="txtBookId" style="display:normal" disabled/></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tên sách</span></td>
+                        <td> <input type="text" id="txtName" name="txtName" maxlength="200"></td>
+                        <td><span>Tóm Tắt</span></td>
+                        <td><input type="text" id="txtSummary" name="txtSummary" maxlength="200"></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tác Giả</span></td>
+                        <td><input type="text" id="txtAuthor" name="txtAuthor" maxlength="100"></td>
+                        <td><span>Số Trang</span></td>
+                        <td><input type="text" id="txtPageNumber" name="txtPageNumber" maxlength="4"></td>  
+                    </tr>
+                    <tr>
+                        <td>Thể Loại</td>
+                        <td>
+                            <select id="cmbCateId" name="cmbCateId">
+                                <option selected="selected" value="-1">The Loai</option>
+                                <option value="1">Truyện Tranh</option>
+                                <option value="2">Tiểu thuyết</option>
+                                <option value="3">Hài hước</option>
+                                <option value="4">Khác</option>
+                            </select>
+
+                        </td>
+                        <td>Còn Lưu Hành</td>
+                        <td>
+                            <select id="cmbIsContinued" name="cmbIsContinued" style="display:none">
+                                <option selected="selected" value="-1">Trạng Thái</option>
+                                <option value="1">Còn Lưu hành</option>
+                                <option value="0">Ngừng Lưu hành</option>
+                            </select>
+                        </td>
+
+                       
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align:center">
+                            <input type="button" id="btnMoi" name="btnMoi" value="Mới" />
+                            <input type="button" id="btnLuu" name="btnLuu" value="Lưu" />
+                            <input type="button" id="btnXoa" name="btnXoa" value="Xóa" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table id="tblJQGrid">
+                            </table>
+                            <div id="pager" name="pager"></div>
+                        </td>
+                    </tr>
+                </table>  
+        </div>
+    </div>
+    
+    
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // chi cho phep nhap so
+            $("#txtPageNumber").keydown(function (e) {
+                -1 !== $.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) || /65|67|86|88/.test(e.keyCode)
+                    && (!0 === e.ctrlKey || !0 === e.metaKey) || 35 <= e.keyCode
+                    && 40 >= e.keyCode || (e.shiftKey || 48 > e.keyCode || 57 < e.keyCode)
+                    && (96 > e.keyCode || 105 < e.keyCode) && e.preventDefault()
+            });
+
+            $("#tblJQGrid").jqGrid({
+                url: 'Book/getBookList',
+                datatype: "json",
+                //mtype: 'GET',
+                colNames: ['Mã', 'Tên', 'Tóm tắt', 'Số Trang', 'Tác Giả', 'Lưu hành', 'Mã Thể Loại', 'Tên Thể Loại'],
+                colModel: [
+                    { name: 'BookId', index: 'BookId', width: 40, stype: 'text', hidden: false },
+                    { name: 'Name', index: 'Name', width: 150 },
+                    { name: 'Summary', index: 'Summary', width: 150 },
+                    { name: 'PageNumber', index: 'PageNumber', width: 30 },
+                    { name: 'Author', index: 'Author', width: 150},
+                    { name: 'IsContinued', index: 'IsContinued', width: 30, hidden: true },
+                    { name: 'CateId', index: 'CateId', width: 30, hidden: true },
+                    { name: 'CateName', index: 'CateName', width: 100 }
+                
+                ],
+                width: 900,
+                height: 400,
+                rowNum: 15,
+                sortname: 'BookId',
+                viewrecords: true,
+                sortorder: "asc",
+                caption: "Book List",
+                scrollOffset: 0,
+                onSelectRow: function (id) {
+                    if (id) {
+                        var ret = $("#tblJQGrid").jqGrid('getRowData', id);
+                        gansach(ret);
+                    }
+                },
+                rowList: [10, 20, 50],
+                rownumbers: true,
+                pager: '#pager',
+                gridview: true,
+                viewrecords: true,
+                loadonce: false,
+                jsonReader: {
+                    repeatitems: false,
+                    id: "id",
+                    root: "rows",
+                    page: "page",
+                    total: "total",
+                    records: "records"
+                }
+
+            });
+
+
+            function gansach(arr) {
+                if (arr == null) {
+                    // lay ra du lieu va gan vao textbox;
+                    $("#txtBookId").val("");
+                    $("#txtName").val("");
+                    $("#txtSummary").val("");
+                    $("#txtPageNumber").val("");
+                    $("#txtAuthor").val("");
+                    $("#cmbIsContinued").val(-1);
+                    $("#cmbCateId").val(-1);
+                }
+                else{
+                    // lay ra du lieu va gan vao textbox;
+                    $("#txtBookId").val(arr.BookId);
+                    $("#txtName").val(arr.Name);
+                    $("#txtSummary").val(arr.Summary);
+                    $("#txtPageNumber").val(arr.PageNumber);
+                    $("#txtAuthor").val(arr.Author);
+                    $("#cmbIsContinued").val(arr.IsContinued == "true" ? 1 : 0);
+                    $("#cmbCateId").val(arr.CateId);
+                }
+                
+            }
+
+            $("#btnLuu").click(function () {
+                luusach();
+
+            });
+
+            $("#btnMoi").click(function () {
+                gansach(null);
+
+            });
+
+            $("#btnXoa").click(function () {
+                if ($("#txtBookId").val() == "") {
+                    jAlert("Chua chon sach de xoa", "Canh Bao");
+                } else{
+                    // thuc hien xoa thong tin sach theo id sach;
+                    var str = [$("#txtBookId").val(), "0"];
+                    // them moi ho khau & chu ho
+                    url = "Book/deleteBook";
+                    $.post(url, {
+                        url: convertArray(str)
+                    }).done(function (data) {
+                        if (data == "-1") {
+                            jAlert("Lỗi xóa -1", "Warning");
+                        } else if (data == "0") {
+                            jAlert("Lỗi xóa 0", "Warning");
+                        } else {
+                            jAlert("Xóa Thanh Cong " + data, "Warning");
+                            tailaisach();
+                            gansach(null);
+                        }
+                    });
+                }
+
+            });
+
+            function luusach(){
+                var bookId = $("#txtBookId").val();
+                var name = $("#txtName").val();
+                var summary = $("#txtSummary").val();
+                var pageNumber = $("#txtPageNumber").val();
+                var author = $("#txtAuthor").val();
+                var isContinued = $("#cmbIsContinued").val();
+                var cateId = $("#cmbCateId").val();
+                var er = "";
+
+                if (name == "")
+                {
+                    er += "Chua nhap ten.\n";
+                }
+                if (pageNumber == "") {
+                    er += "Chua nhap so trang.\n";
+                }
+                if (author == "") {
+                    er += "Chua nhap tac gia.\n";
+                }
+                //if (isContinued == -1) {
+                //    er += "Chua chon trang thai luu hanh.\n";
+                //}
+                if (cateId == -1) {
+                    er += "Chua nhap the loai.\n";
+                }
+                
+                //jAlert(er, "Canh bao");
+                
+                if (er == "") {
+                    // cap nhat du lieu; su dung trang thai luon la dang luu hanh;
+                    var str = [bookId, name, summary, pageNumber, author, 1, cateId, "0"];
+                    url = "Book/updateBook";
+                    $.post(url, {
+                        url: convertArray(str)
+                    }).done(function (data) {
+                        if (data == "-1") {
+                            jAlert("Cap nhat That Bai -1", "Warning");
+                        } else if (data == "0") {
+                            jAlert("Cap nhat That Bai 0", "Warning");
+                        } else {
+                            jAlert("Cap nhat Thanh Cong " + data, "Warning");
+                            tailaisach();
+                        }
+                    });
+                }
+                else
+                {
+                    jAlert(er,"Canh Bao");
+                }
+            }
+
+            function tailaisach() {
+                // load lai grid;
+                var url = 'Book/getBookList';
+
+                $("#tblJQGrid").jqGrid('setGridParam',
+                        { url: url, page: 1, datatype: "json" }).trigger('reloadGrid');
+            }
+        });
+
+        // custome function;
+        function convertArray(arr) {
+            var str = "";
+            for (var i = 0; i < arr.length - 1; i++)
+            {
+                str += arr[i] + "#";
+            }
+            str += arr[arr.length - 1];
+            
+            return str;
+        }
+    </script>
+</body>
