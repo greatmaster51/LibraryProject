@@ -1,0 +1,126 @@
+﻿@{
+    ViewBag.Title = "BookTraCuu";
+    }
+
+<!--Only for dialog-->
+<script src="~/Scripts/dialog/jquery-ui.1.9.1.js"></script>
+
+<script type="text/javascript">
+    var booktk_dialog;              // dialog tra cuu thong tin sach;
+
+    $(document).ready(function () {
+        $("#tblJQGrid1").jqGrid({
+            url: 'Book/getBookList',
+            datatype: "json",
+            //mtype: 'GET',
+            colNames: ['Mã', 'Tên', 'Tóm tắt', 'Số Trang', 'Tác Giả'],
+            colModel: [
+                { name: 'BookId', index: 'BookId', width: 40, stype: 'text', hidden: false },
+                { name: 'Name', index: 'Name', width: 150 },
+                { name: 'Summary', index: 'Summary', width: 150 },
+                { name: 'PageNumber', index: 'PageNumber', width: 30 },
+                { name: 'Author', index: 'Author', width: 150 },
+
+            ],
+            width: 900,
+            height: 400,
+            rowNum: 15,
+            sortname: 'BookId',
+            viewrecords: true,
+            sortorder: "asc",
+            caption: "Book List",
+            scrollOffset: 0,
+            ondblClickRow: function(id) {
+                var ret = $("#tblJQGrid1").jqGrid('getRowData', id);
+                if (ret != null) {
+                    booktk_dialog.dialog("close");
+                    getBookInfo(ret);
+                }
+            },
+            rowList: [10, 20, 50],
+            rownumbers: true,
+            pager1: '#pager1',
+            gridview: true,
+            viewrecords: true,
+            loadonce: false,
+            jsonReader: {
+                repeatitems: false,
+                id: "id",
+                root: "rows",
+                page: "page",
+                total: "total",
+                records: "records"
+            }
+
+        });
+
+        booktk_dialog = $("#booktk_modal").dialog({
+            autoOpen: false,
+            resizable: false,
+            modal: false,
+            width: 900,
+            height: 400,
+            //position: { my: "center top", at: "center top", of: window }
+        });
+
+        $("#btnChonSach").click(function () {
+            booktk_dialog.dialog("open");
+            //jAlert("Bat hop thoai len", "Canh Bao");
+            //$("#booktk_modal").css("display", "block");
+               
+        });
+
+        function tailaisach() {
+            // load lai grid;
+            var url = 'Book/getBookList';
+
+            $("#tblJQGrid1").jqGrid('setGridParam',
+                    { url: url, page: 1, datatype: "json" }).trigger('reloadGrid');
+        }
+
+
+        function convertArray(arr) {
+            var str = "";
+            for (var i = 0; i < arr.length - 1; i++) {
+                str += arr[i] + "#";
+            }
+            str += arr[arr.length - 1];
+
+            return str;
+    
+        }
+    });
+</script>
+
+    <!-- ############################################################## -->
+    <div id="booktk_modal" style="display:none" title="Tìm kiếm Thong tin sach">
+        <div class="wrapper col2">
+            <div id="topbar">
+                    <table>
+                        <tr>
+                            <td>Tên sách</td>
+                            <td><input type="text" id="txtBktcName" name="txtBktcName" maxlength="100"></td>
+                            <td>Tác giả</td>
+                            <td><input type="text" id="txtBktcAuthor" name ="txtBktcAuthor" maxlength="100"/></td>
+                        
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="text-align:center">
+                                <input type="button" id="btnBktcSearch" name="btnBktcSearch" value="Tìm kiếm" />
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <table id="tblJQGrid1">
+                                </table>
+                                <div id="pager1" name="pager1"></div>
+                            </td>
+                        </tr>
+                    </table>  
+            </div>
+        </div>
+    </div>
+<!-- ############################################################## -->
+
+    

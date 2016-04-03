@@ -1,0 +1,44 @@
+
+
+<link rel="stylesheet" href="../../styles/layout.css" type="text/css" />
+<link href="../../styles/ui.jqgrid.css" rel="stylesheet" />
+<link href="../../styles/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+<link href="../../Scripts/dialog/jquery.alerts.1.css" rel="stylesheet" />
+
+<script src="../../Scripts/JQGrid/jquery-1.11.0.min.js"></script>
+<script src="../../Scripts/JQGrid/jquery.jqGrid.min.js"></script>
+<script src="../../Scripts/JQGrid/grid.locale-en.js"></script>
+<script src="../../Scripts/dialog/jquery.alerts.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+
+<script>
+    var booktk_dialog;
+	
+    $(function() {
+        booktk_dialog = $( "#dialog-box" ).dialog({
+            autoOpen: false,
+			resizable: false,
+			width: 300,
+			position: {my: "center top", at: "center top", of: window}
+        });
+		
+		$("#btnShow").click(function(evt){
+			booktk_dialog.dialog("open");
+		});
+		
+		$("#btnHide").click(function(evt){
+			booktk_dialog.dialog("close");
+			
+		});
+    });
+</script>
+
+<div id="dialog-box" style="display:none" title="Getting down with dialog boxes">
+    <p>This is how you initialize and use the dialog box.</p>
+</div>
+<div>
+	<input type="button" id="btnShow" name="btnShow" value="Show" />
+	<input type="button" id="btnHide" name="btnHide" value = "Hide" />
+</div>

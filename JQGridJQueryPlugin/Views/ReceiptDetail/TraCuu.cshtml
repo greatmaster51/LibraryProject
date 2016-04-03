@@ -1,0 +1,117 @@
+﻿@{
+    ViewBag.Title = "ReceiptDetailTraCuu";
+    }
+
+<!--Only for dialog-->
+<script src="~/Scripts/dialog/jquery-ui.1.9.1.js"></script>
+
+<script type="text/javascript">
+    var ReceiptDetailtk_dialog;
+  
+    $(document).ready(function () {
+        // jqgrid declaration;
+        $("#tblJQGrid2").jqGrid({
+            url: 'ReceiptDetail/getReceiptDetailList',
+            datatype: "json",
+            //mtype: 'GET',
+            colNames: ['Id', 'Họ tên', 'ReceiptDetailname'],
+            colModel: [
+                { name: 'ReceiptDetailId', index: 'ReceiptDetailId', width: 40, stype: 'text', hidden: false },
+                { name: 'Name', index: 'Name', width: 150 },
+                { name: 'ReceiptDetailname', index: 'ReceiptDetailname', width: 150 }
+            ],
+            width: 500,
+            height: 300,
+            rowNum: 15,
+            sortname: 'ReceiptDetailId',
+            viewrecords: true,
+            sortorder: "asc",
+            caption: "ReceiptDetail List",
+            scrollOffset: 0,
+            ondblClickRow: function(id) {
+                var ret = $("#tblJQGrid2").jqGrid('getRowData', id);
+                if (ret != null) {
+                    ReceiptDetailtk_dialog.dialog("close");
+                    getReceiptDetailInfo(ret);
+                }
+            },
+            rowList: [10, 20, 50],
+            rownumbers: true,
+            pager2: '#pager2',
+            gridview: true,
+            viewrecords: true,
+            loadonce: false,
+            jsonReader: {
+                repeatitems: false,
+                id: "id",
+                root: "rows",
+                page: "page",
+                total: "total",
+                records: "records"
+            }
+
+        });
+
+            ReceiptDetailtk_dialog = $("#ReceiptDetailtk_modal").dialog({
+                autoOpen: false,
+                resizable: false,
+                modal: false,
+                width: 550,
+                height: 350,
+                //position: { my: "center top", at: "center top", of: window }
+            });
+
+            $("#btnChonReceiptDetail").click(function () {
+                ReceiptDetailtk_dialog.dialog("open");
+                //jAlert("Bat hop thoai len - Borrower", "Canh Bao");
+                //$("#ReceiptDetailtk_modal").css("display", "block");
+                
+               
+            });
+
+            $("#btnChonReceiptDetail1").click(function () {
+                ReceiptDetailtk_dialog.dialog("open");
+                //jAlert("Bat hop thoai len - Staff", "Canh Bao");
+                //$("#ReceiptDetailtk_modal").css("display", "block");
+            });
+
+            function tailaiReceiptDetail() {
+                // load lai grid;
+                var url = 'ReceiptDetail/getReceiptDetailList';
+
+                $("#tblJQGrid2").jqGrid('setGridParam',
+                        { url: url, page: 1, datatype: "json" }).trigger('reloadGrid');
+            }
+
+
+            function convertArray(arr) {
+                var str = "";
+                for (var i = 0; i < arr.length - 1; i++) {
+                    str += arr[i] + "#";
+                }
+                str += arr[arr.length - 1];
+
+                return str;
+    
+            }
+    });
+</script>
+
+    <!-- ############################################################## -->
+    <div id="ReceiptDetailtk_modal" style="display:none" title="Tìm kiếm Thong tin ReceiptDetail">
+        <div class="wrapper col2">
+            <div id="topbar">
+                    <table>
+                        
+                        <tr>
+                            <table id="tblJQGrid2">
+                            </table>
+                            <div id="pager2" name="pager2"></div>
+                        </tr>
+                    </table>  
+            </div>
+        </div>
+    </div>
+<!-- ############################################################## -->
+
+    
